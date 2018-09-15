@@ -3,16 +3,28 @@ import logo from './logo.svg';
 import './App.css';
 //test
 class App extends Component {
+  state = {
+    number :0,
+  }
+  handaddnum = () =>{
+    const {number} = this.state
+    console.log(number)
+    this.setState({number : number +1})
+  }
+
+  handsubnum = () =>{
+    const {number} = this.state
+    console.log(number)
+    this.setState({number : number -1})
+  }
+  
   render() {
+    const { number} = this.state
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <button onClick={this.handaddnum}>Add</button>
+        <div>{ number}</div>
+        <button onClick={this.handsubnum}>sub</button>
       </div>
     );
   }
