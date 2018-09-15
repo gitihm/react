@@ -12,7 +12,13 @@ class App extends Component {
     this.setState({number : number +1})
   }
 
+
+//  function a()  {}
+//  a = () => {}
+
   handsubnum = () =>{
+    //const n;
+    //n = this.state.n;
     const {number} = this.state
     console.log(number)
     this.setState({number : number -1})
